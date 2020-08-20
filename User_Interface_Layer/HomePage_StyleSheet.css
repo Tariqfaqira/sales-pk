@@ -1,0 +1,339 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 0px 10px 0px 30px;
+    overflow: hidden;
+}
+
+.box {
+    float: left;
+    margin: 30px;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.form-group {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+form .page-header {
+    text-align: center;
+    background-color: #347AB6;
+    color: white;
+    padding-top: 10px;
+}
+
+form .well {
+    margin: 5% 0% 0% 0%;
+    /*background-color: #347AB6;*/
+}
+
+.dropbtn {
+    background-color: #347AB6;
+    border-radius:7px;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    border-radius: 7px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 1px 5px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #347AB6;
+            border-radius: 7px;
+            color: white;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.box{
+    /*min-height: 320px;
+    min-width:200px;
+     max-height: 320px;
+    max-width:200px;
+    padding: 3px;*/
+}
+
+.lblBox{
+    font-size: 12px;
+    margin-top: 6px;
+    padding-top: 6px;
+}
+.parent {
+   width: 195px;
+   height: 150px;
+}
+
+/* This will style any <img> element in .parent div */
+.parent img {
+   height: 100%;
+   width: 100%;
+}
+
+/*.box{
+    margin: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row rap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flexbox;
+
+}
+
+.box div{
+    -webkit-box-flex: initial;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+}*/
+
+/*.container-fluid {
+    margin: 3px 3px 0px 3px;
+}*/
+/* Header */
+/*header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 10px;
+    min-height: 12px;
+    border-bottom: #e8491d 3px solid;
+}*/
+/*Flag in header*/
+/*header img {
+        margin: -3px 20px 5px 0px;
+        float: left;
+    }*/
+/*#pak {
+    float: left;
+    margin: -20px 0px -20px 0px;
+    text-align: center;
+}*/
+/*header nav {
+    float: right;
+    margin-top: 0px;
+    height: 18px;
+}*/
+/*header a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}*/
+/*header li {
+    float: left;
+    display: inline;
+    margin-left: 25px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header a:hover {
+    color: red;
+}*/
+/*Header End*/
+/*#subscribe_bar {
+    background: white;
+    color: green;
+    min-height: 50px;
+    border-bottom: #e8491d 3px solid;
+}
+
+#branding {
+    color: forestgreen;
+    float: left;
+    margin: -60px 0px -60px 0px;
+}
+
+    #branding p {
+        font-size: 56px;
+        margin-right: 550px;
+    }
+
+#hilight {
+    color: green;
+    font-weight: bold;
+}
+
+#subscribeDiv{
+    
+}
+form {
+    margin-top: 20px;
+
+}
+
+#btnSubscribe, #txtSubscribe {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+    #btnSubscribe{
+        border-style: none;
+        cursor:pointer;
+    }
+    #txtSubscribe {
+        width: 200px;
+        margin-left: 20px;
+        margin-right: 30px;
+    }*/
+/*form group ruby:*/
+/*#groupBy {
+    background-color: #ccc;
+    min-height: 40px;
+    padding: 5px 0px 5px 100px;
+    margin: 7px 5px 7px 7px;
+}
+
+    #nav_1 {
+        text-decoration-color: black;
+        float: left;
+    }
+
+    #nav_2 {
+        text-decoration-color: black;
+        float: right;
+    }
+
+    #groupBy a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+        #groupBy a:hover {
+            color: red;
+            font-weight: bold;
+        }
+
+    #groupBy li {
+        font-weight: bold;
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+
+    #groupBy ul {
+        margin: 0;
+        padding: 0;
+    }*/
+/*Search By */
+/* Clear floats after the columns */
+/*section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section nav {
+    float: left;
+    width: 15%;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 7px;
+    padding-left: 15px;
+    background: #ccc;
+    border-right: #e8491d 3px solid;
+}
+
+    section
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+section li {
+    margin-left: 20px;
+    font-size: 13px;
+}*/
+/*.background_img {
+    background: url("./images/slideImg_2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    float: left;
+    width: 80%;
+    height: auto;
+    min-height:542px;
+}*/
+/*.box {
+    background: #ccc;
+    float: left;
+    margin: 20px 60px 20px 0px;
+}
+
+    .box h3 {
+        text-align: center;
+    }
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}*/
+/* Footer */
+/*#footer_Paragraph {
+    align-content: center;
+    text-align: center;
+}
+
+footer {
+    border-top: #e8491d 3px solid;
+    border-bottom: #e8491d 3px solid;
+    background: black;
+    color: white;
+}*/

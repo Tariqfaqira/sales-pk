@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Sales_pk.User_Interface_Layer.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="See sails and cnform size and quality on Sales.pk before visiting the shops" />
+
+    <meta name="keywords" content="Mens,Womens and Childs Shoes" />
+    <meta name="author" content="Brad Traversy" />
+
+    <title>Sales.pk Sales Of Shoes</title>
+    <link rel="stylesheet" href="HomePage_StyleSheet.css" />
+    <script type="text/javascript" src="JavaScript.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .navbar-header {
+            height: 47px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="margin: 0px; padding-top: 10px; padding-bottom: 0px">
+        <div class="header">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" style="color: white">Pakistan | Visit here to check Sales in <span>
+                        <img src="./images/pak_flag.jpg" class="img-circle" /></span></a>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collaspeList">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse" id="collaspeList">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="float: left">Help</a>
+                        <li><a href="#" style="float: left">About</a></li>
+                        <li><a href="#" style="float: left">Services</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" style="margin-right: 3px;">
+                        <li><a href="UserLogin.aspx" id="loginBtn" runat="server"><span class="glyphicon glyphicon-log-in" style="float: left"></span> Login</a></>
+                        <li><a href="#" id="logoutBtn" onclick="logoutSession_Click" runat="server"><span class="glyphicon glyphicon-log-out" style="float: left"></span> Logout</a></>
+
+                        <li><a href="Register.aspx"><span class="glyphicon glyphicon-user" style="float: left"></span> Register</a></li>
+                        <li><a href="Upload_Product.aspx"><span class="glyphicon glyphicon-upload" style="float: left"></span> Upload on Sales.pk</a></li>
+                        <%--<li><a href="Reporting/Subscribe_Page.aspx"><span class="glyphicon glyphicon-record" style="float: left"></span> Show Reports</a></li>--%>
+                        <li><a href="ProductReport.aspx"><span class="glyphicon glyphicon-record" style="float: left"></span> Show Reports</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin: 3px; border-top: 3px solid #347AB6; border-bottom: 3px solid #347AB6; background: #E1EFDA">
+        <form style="margin: 3px;">
+            <div>
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" style="font-size: 40px">Sales.pk</a>
+                    <a href="#" class="navbar-brand">
+                        <input type="button" value="Subscribe1" runat="server" />
+                        <%--<input type="button" runat="server" value="Subscribe" id="btnSubscribe" onClick="SubscribeButton_Click" style="font-size: 16px; margin:0px"/>--%>
+                    </a>
+
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="collaspeList1">
+                    <a href="#" class="navbar-brand">
+                        <input type="text" id="txtSubscribe" runat="server" /></a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid" style="margin: 3px;">
+        <nav class="navbar navbar-default navbar-inverse">
+            <ul class="nav navbar-nav">
+                <li><a href="HomePage.aspx" style="float: left" >Home</a></li>
+                <li><a href="#" style="float: left" onclick="SearchBy_All()">All Catagories</a></li>
+                <li><a href="#" style="float: left" onclick="SearchBy_Men()">Men</a></li>
+                <li><a href="#" style="float: left" onclick="SearchBy_Women()">Women</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-fluid" style="margin: 3px">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>Search Your Choise</h3>
+                    </div>
+                    <div class="panel-body bg-success">
+                        <nav class="nav navbar-default">
+                            <ul class="nav nav-tabs-justified" style="line-height: 6px; margin: 10px 0px 10px 20px">
+                                <h4>Search By Price:</h4>
+                                <li><a href="#" onclick="SearchBy_lowPrice()"><1000 </a></li>
+                                <li><a href="#" onclick="SearchBy_medPrice()">1000-2000 </a></li>
+                                <li><a href="#" onclick="SearchBy_higPrice()">2000-3000 </a></li>
+                                <li><a href="#" onclick="SearchBy_extraHigPrice()">>3000 </a></li>
+                            </ul>
+                            <ul class="nav nav-tabs-justified" style="line-height: 6px; margin: 20px 0px 10px 20px">
+                                <h4>Search By Size:</h4>
+                                <li><a href="#" onclick="SearchBy_smallSize()">Small </a></li>
+                                <li><a href="#" onclick="SearchBy_medSize()">Medium </a></li>
+                                <li><a href="#" onclick="SearchBy_largSize()">Large</a></li>
+                            </ul>
+                            <ul class="nav nav-tabs-justified" style="line-height: 6px; margin: 20px 0px 10px 20px">
+                                <h4>Search By Brand:</h4>
+                                <li><a href="#" onclick="SearchBy_Bata()">Bata </a></li>
+                                <li><a href="#" onclick="SearchBy_Service()">Service </a></li>
+                                <li><a href="#" onclick="SearchBy_Borjan()">Borjan </a></li>
+                                <li><a href="#" onclick="SearchBy_Metro()">Metro </a></li>
+                            </ul>
+                            <ul class="nav nav-tabs-justified" style="line-height: 6px; margin: 20px 0px 10px 20px">
+                                <h4>Search By City :</h4>
+                                <li><a href="#" onclick="SearchBy_City()">Enter City Name</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <asp:ContentPlaceHolder ID="head" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin: 3px 6px 0px 6px; padding: 0px; text-align: center; color: #ccc">
+        <div class="navbar navbar-default navbar-inverse">
+            <h4>Sales.pk, Copyright &copy; 2019</h4>
+        </div>
+    </div>
+</body>
+</html>

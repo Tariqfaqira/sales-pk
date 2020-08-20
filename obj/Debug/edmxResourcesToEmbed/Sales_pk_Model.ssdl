@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Sales_pkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Login_DB">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sales_pk.dbo.ProductItem_DB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProductItem_DB">
+    <Key>
+      <PropertyRef Name="email" />
+      <PropertyRef Name="brand" />
+      <PropertyRef Name="location" />
+      <PropertyRef Name="city" />
+      <PropertyRef Name="size" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="image" />
+    </Key>
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="brand" Type="varchar(max)" Nullable="false" />
+    <Property Name="location" Type="varchar(max)" Nullable="false" />
+    <Property Name="city" Type="varchar(max)" Nullable="false" />
+    <Property Name="size" Type="int" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="image" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Register_DB">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="brand" Type="varchar(max)" Nullable="false" />
+    <Property Name="location" Type="varchar(max)" Nullable="false" />
+    <Property Name="city" Type="varchar(max)" Nullable="false" />
+    <Property Name="password" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subscribe_DB">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="varbinary" MaxLength="100" Nullable="false" />
+    <Property Name="interest" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="Sales_pkModelStoreContainer">
+    <EntitySet Name="Login_DB" EntityType="Self.Login_DB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Register_DB" EntityType="Self.Register_DB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscribe_DB" EntityType="Self.Subscribe_DB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductItem_DB" EntityType="Self.ProductItem_DB" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProductItem_DB].[email] AS [email], 
+    [ProductItem_DB].[brand] AS [brand], 
+    [ProductItem_DB].[location] AS [location], 
+    [ProductItem_DB].[city] AS [city], 
+    [ProductItem_DB].[size] AS [size], 
+    [ProductItem_DB].[price] AS [price], 
+    [ProductItem_DB].[quantity] AS [quantity], 
+    [ProductItem_DB].[image] AS [image]
+    FROM [dbo].[ProductItem_DB] AS [ProductItem_DB]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

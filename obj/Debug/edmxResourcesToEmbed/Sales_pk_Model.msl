@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sales_pkModelStoreContainer" CdmEntityContainer="Salespk_Entities">
+    <EntitySetMapping Name="Login_DB">
+      <EntityTypeMapping TypeName="Sales_pkModel.Login_DB">
+        <MappingFragment StoreEntitySet="Login_DB">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Register_DB">
+      <EntityTypeMapping TypeName="Sales_pkModel.Register_DB">
+        <MappingFragment StoreEntitySet="Register_DB">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribe_DB">
+      <EntityTypeMapping TypeName="Sales_pkModel.Subscribe_DB">
+        <MappingFragment StoreEntitySet="Subscribe_DB">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Sales_pkModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductItem_DB">
+      <EntityTypeMapping TypeName="Sales_pkModel.ProductItem_DB">
+        <MappingFragment StoreEntitySet="ProductItem_DB">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
